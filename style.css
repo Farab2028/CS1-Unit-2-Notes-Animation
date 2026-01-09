@@ -1,3 +1,33 @@
+/* STEP 1: Configure an element to be animated */
+#animated-shape {
+    background: lightblue;
+    width: 200px;
+    height: 200px;
+    /* sub-properties to attach an animation */
+    animation-name: colorchange-alt;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+/* STEP 2: Define an animation sequence */
+@keyframes colorchange {
+    from { background: lightblue; }
+    to { background: plum; }
+}
+@keyframes colorchange-alt {
+    0% { background: lightblue; }
+    50% {
+         background: plum;
+        transform: scale(0.3);
+        }
+    100% { background: lightblue; }
+}
+
+
+
+
+
 .box {
     background: lightpink;
     margin: 20px;
